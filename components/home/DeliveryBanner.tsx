@@ -3,9 +3,9 @@ import { company, deliveryAreas } from "@/lib/site";
 
 export function DeliveryBanner() {
     return (
-        <section className="w-full bg-surface-low py-14">
+        <section className="w-full bg-surface-low py-10 sm:py-14">
             <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
-                <div className="bg-surface p-8 lg:p-12 shadow-md relative overflow-hidden">
+                <div className="bg-surface p-5 sm:p-8 lg:p-12 shadow-md relative overflow-hidden">
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div className="lg:col-span-7 space-y-4">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent-bright text-on-accent label-tracked text-[10px] uppercase tracking-widest font-bold">
@@ -15,7 +15,7 @@ export function DeliveryBanner() {
                             <h2 className="font-display font-bold text-2xl md:text-3xl uppercase text-carbon tracking-tight">
                                 We deliver as well — from single boards to full articulated packs
                             </h2>
-                            <p className="text-lg text-ink-variant max-w-2xl leading-relaxed">
+                            <p className="text-base sm:text-lg text-ink-variant max-w-2xl leading-relaxed">
                                 Whether you need 4 sheets of acoustic plasterboard dropped urgently to a domestic
                                 loft conversion in Solihull, or 20 tonnes of structural Scandinavian C24 delivered
                                 direct onto steels in Aston, our private Birmingham fleet handles it effortlessly.
@@ -24,7 +24,7 @@ export function DeliveryBanner() {
                                 {deliveryAreas.map((area) => (
                                     <span
                                         key={area}
-                                        className="px-3 py-1.5 bg-surface-container label-tracked text-[10px] uppercase font-semibold"
+                                        className="px-2.5 sm:px-3 py-1.5 bg-surface-container label-tracked text-[10px] uppercase font-semibold"
                                     >
                                         {area}
                                     </span>
@@ -33,7 +33,7 @@ export function DeliveryBanner() {
                         </div>
                         <div className="lg:col-span-5 flex flex-col gap-3">
                             {/* High-res delivery fleet visual */}
-                            <div className="relative w-full h-44 overflow-hidden bg-surface-container shadow-sm group">
+                            <div className="relative w-full h-48 sm:h-56 lg:h-44 overflow-hidden bg-surface-container shadow-sm group">
                                 <Image
                                     src="/images/delivery-truck.jpg"
                                     alt="5 Star Builders Merchants logistics fleet and forklift yard loading"

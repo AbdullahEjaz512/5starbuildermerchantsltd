@@ -42,7 +42,7 @@ export function AboutContent() {
                                 residential contractors, commercial specifiers, and self-builders across the West
                                 Midlands with direct structural stock and rapid delivery.
                             </p>
-                            <div className="flex items-center gap-6 pt-2 label-tracked text-xs text-carbon uppercase font-bold tracking-wider">
+                            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 label-tracked text-xs text-carbon uppercase font-bold tracking-wider">
                                 <span className="flex items-center gap-1.5">
                                     <span className="material-symbols-outlined text-accent text-base">bolt</span>
                                     Fast-Track Yard Turnaround
@@ -100,26 +100,26 @@ export function AboutContent() {
                         </div>
 
                         {/* Metric bars */}
-                        <div className="grid grid-cols-3 gap-4 pt-2">
-                            <div className="bg-surface-high p-4 flex flex-col">
-                                <span className="font-display font-bold text-xl text-carbon font-bold">
-                                    15<span className="text-accent text-base">m</span>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 pt-2">
+                            <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
+                                <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">
+                                    15<span className="text-accent text-sm sm:text-base">m</span>
                                 </span>
-                                <span className="label-tracked text-xs uppercase text-ink-variant mt-1">
+                                <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
                                     Avg Yard Load Time
                                 </span>
                             </div>
-                            <div className="bg-surface-high p-4 flex flex-col">
-                                <span className="font-display font-bold text-xl text-carbon font-bold">
-                                    100<span className="text-accent text-base">%</span>
+                            <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
+                                <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">
+                                    100<span className="text-accent text-sm sm:text-base">%</span>
                                 </span>
-                                <span className="label-tracked text-xs uppercase text-ink-variant mt-1">
+                                <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
                                     BS EN Compliant
                                 </span>
                             </div>
-                            <div className="bg-surface-high p-4 flex flex-col">
-                                <span className="font-display font-bold text-xl text-carbon font-bold">B1-B99</span>
-                                <span className="label-tracked text-xs uppercase text-ink-variant mt-1">
+                            <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
+                                <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">B1-B99</span>
+                                <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
                                     Direct Delivery
                                 </span>
                             </div>
@@ -148,17 +148,17 @@ export function AboutContent() {
                         </div>
 
                         {/* Material specification strip */}
-                        <div className="bg-surface-low p-4 flex flex-wrap items-center justify-between gap-4 label-tracked text-xs uppercase tracking-wider text-ink-variant">
+                        <div className="bg-surface-low p-4 flex flex-wrap items-center justify-between gap-3 sm:gap-4 label-tracked text-[11px] sm:text-xs uppercase tracking-wider text-ink-variant">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-accent-bright"></span>
                                 <span className="font-bold text-carbon">British Gypsum Plasters</span>
                             </div>
-                            <span>•</span>
+                            <span className="hidden sm:inline">•</span>
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-accent-bright"></span>
                                 <span className="font-bold text-carbon">BS EN 1057 Copper Piping</span>
                             </div>
-                            <span>•</span>
+                            <span className="hidden sm:inline">•</span>
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-accent-bright"></span>
                                 <span className="font-bold text-carbon">De-Aired Heavy Brick & Block</span>
@@ -187,11 +187,11 @@ export function AboutContent() {
                     </div>
 
                     {/* 3 pillar bento grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                         {/* Pillar 1 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                        <div className="bg-surface-lowest p-6 lg:p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
                             <div>
-                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                <div className="relative w-full h-44 -mx-6 -mt-6 mb-6 lg:-mx-8 lg:-mt-8 overflow-hidden bg-surface-container">
                                     <Image
                                         src="/images/hero-yard.jpg"
                                         alt="Immediate Yard Fulfillment at 5 Star Builders Merchants"
@@ -220,16 +220,16 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-6 -mb-6 lg:-mx-8 lg:-mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>Direct Counter Loading:</span>
                                 <span className="font-bold text-accent">No Queues</span>
                             </div>
                         </div>
 
                         {/* Pillar 2 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                        <div className="bg-surface-lowest p-6 lg:p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
                             <div>
-                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                <div className="relative w-full h-44 -mx-6 -mt-6 mb-6 lg:-mx-8 lg:-mt-8 overflow-hidden bg-surface-container">
                                     <Image
                                         src="/images/delivery-truck.jpg"
                                         alt="Heavy-Duty Dedicated Fleet at 5 Star Builders Merchants"
@@ -259,16 +259,16 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-6 -mb-6 lg:-mx-8 lg:-mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>HIAB Crane Offload:</span>
                                 <span className="font-bold text-accent">Same-Day Active</span>
                             </div>
                         </div>
 
                         {/* Pillar 3 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                        <div className="bg-surface-lowest p-6 lg:p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
                             <div>
-                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                <div className="relative w-full h-44 -mx-6 -mt-6 mb-6 lg:-mx-8 lg:-mt-8 overflow-hidden bg-surface-container">
                                     <Image
                                         src="/images/contact-yard.jpg"
                                         alt="Comprehensive Trade Depth at 5 Star Builders Merchants"
@@ -298,7 +298,7 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-6 -mb-6 lg:-mx-8 lg:-mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>Direct Mill Networks:</span>
                                 <span className="font-bold text-accent">Guaranteed Spec</span>
                             </div>

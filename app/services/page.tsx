@@ -47,7 +47,7 @@ export default function ServicesPage() {
                                 architectural envelope — timber, copper, electrical, drainage, plasterboard, and
                                 scheme bonding — with same-day fleet dispatch across the West Midlands.
                             </p>
-                            <div className="flex items-center gap-6 pt-2 label-tracked text-xs text-carbon uppercase font-bold tracking-wider">
+                            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 label-tracked text-xs text-carbon uppercase font-bold tracking-wider">
                                 <span className="flex items-center gap-1.5">
                                     <span className="material-symbols-outlined text-accent text-base">bolt</span>
                                     Fast-Track Yard Turnaround

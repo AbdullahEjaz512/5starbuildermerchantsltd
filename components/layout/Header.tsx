@@ -19,8 +19,8 @@ export function Header() {
                             className="flex items-center gap-2.5 text-carbon font-display font-bold text-base sm:text-xl tracking-tight uppercase"
                         >
                             <span className="inline-block w-2 h-2 bg-accent-bright status-pip"></span>
-                            <span className="hidden xs:inline">5 Star Builders Merchants</span>
-                            <span className="xs:hidden">5 Star Merchants</span>
+                            <span className="hidden sm:inline">5 Star Builders Merchants</span>
+                            <span className="sm:hidden">5 Star Merchants</span>
                         </Link>
 
                         {/* Desktop nav */}

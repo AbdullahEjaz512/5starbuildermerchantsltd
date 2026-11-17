@@ -7,7 +7,7 @@ export function Hero() {
         <section className="relative w-full overflow-hidden bg-canvas pt-6 pb-16 lg:pt-10">
             <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
                 {/* Top operational metadata strip */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-8">
+                <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-6 sm:pb-8">
                     <div className="inline-flex items-center gap-2.5 px-3 py-1.5 bg-surface-high text-ink">
                         <span className="inline-block w-2 h-2 bg-accent-bright status-pip"></span>
                         <span className="label-tracked text-[10px] sm:text-xs uppercase tracking-widest">
@@ -62,33 +62,33 @@ export function Hero() {
                         </div>
 
                         {/* Live metrics blueprint inset */}
-                        <div className="grid grid-cols-3 gap-2 pt-4">
-                            <div className="bg-surface-low p-3.5">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5 pt-4">
+                            <div className="bg-surface-low p-3 sm:p-3.5">
                                 <div className="label-tracked text-[10px] text-ink-variant uppercase tracking-wider">
                                     Yard Ready
                                 </div>
-                                <div className="font-display font-bold text-lg text-carbon uppercase mt-1">
+                                <div className="font-display font-bold text-base sm:text-lg text-carbon uppercase mt-0.5 sm:mt-1">
                                     7:00 AM
                                 </div>
-                                <div className="text-xs text-ink-variant mt-0.5">Mon–Sat Trade Desk</div>
+                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">Mon–Sat Trade Desk</div>
                             </div>
-                            <div className="bg-surface-low p-3.5">
+                            <div className="bg-surface-low p-3 sm:p-3.5">
                                 <div className="label-tracked text-[10px] text-ink-variant uppercase tracking-wider">
                                     Express Delivery
                                 </div>
-                                <div className="font-display font-bold text-lg text-accent uppercase mt-1">
+                                <div className="font-display font-bold text-base sm:text-lg text-accent uppercase mt-0.5 sm:mt-1">
                                     Same Day
                                 </div>
-                                <div className="text-xs text-ink-variant mt-0.5">B1–B99 Postcodes</div>
+                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">B1–B99 Postcodes</div>
                             </div>
-                            <div className="bg-surface-low p-3.5">
+                            <div className="bg-surface-low p-3 sm:p-3.5">
                                 <div className="label-tracked text-[10px] text-ink-variant uppercase tracking-wider">
                                     Stock Depth
                                 </div>
-                                <div className="font-display font-bold text-lg text-carbon uppercase mt-1">
+                                <div className="font-display font-bold text-base sm:text-lg text-carbon uppercase mt-0.5 sm:mt-1">
                                     10,000+
                                 </div>
-                                <div className="text-xs text-ink-variant mt-0.5">BS EN Certified Lines</div>
+                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">BS EN Certified Lines</div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ export function Hero() {
                     {/* Right: photographic yard depth monolith */}
                     <div className="lg:col-span-5 relative">
                         <div className="relative bg-surface-container shadow-xl overflow-hidden group">
-                            <div className="w-full h-[440px] lg:h-[540px] relative overflow-hidden">
+                            <div className="w-full h-[320px] sm:h-[420px] lg:h-[540px] relative overflow-hidden">
                                 <Image
                                     src="/images/hero-yard.jpg"
                                     alt="5 Star Builders Merchants main trade yard and materials depot, Aston Birmingham"
@@ -113,7 +113,7 @@ export function Hero() {
                                 <div className="label-tracked text-[10px] text-accent-bright uppercase tracking-widest font-bold">
                                     Birmingham Main Yard
                                 </div>
-                                <div className="font-display font-bold text-lg uppercase tracking-tight">
+                                <div className="font-display font-bold text-base sm:text-lg uppercase tracking-tight">
                                     Depot #01
                                 </div>
                                 <div className="label-tracked text-[10px] text-on-accent/50">
@@ -122,8 +122,8 @@ export function Hero() {
                             </div>
 
                             {/* Bottom live fleet overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 p-5 bg-carbon/95 text-on-accent backdrop-blur-md">
-                                <div className="flex items-center justify-between mb-2">
+                            <div className="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 bg-carbon/95 text-on-accent backdrop-blur-md">
+                                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
                                     <span className="label-tracked text-[10px] uppercase tracking-widest text-accent-bright flex items-center gap-1.5 font-bold">
                                         <span className="inline-block w-2 h-2 rounded-full bg-accent-bright status-pip"></span>
                                         Active Fleet Offload Unit
@@ -132,9 +132,9 @@ export function Hero() {
                                         Aston • B6
                                     </span>
                                 </div>
-                                <p className="text-xs text-on-accent/70">
+                                <p className="text-[11px] sm:text-xs text-on-accent/70 leading-relaxed">
                                     Equipped with remote-controlled heavy crane drops for roadside and rear-scaffold
-                                    placements. Next available transit departure:{" "}
+                                    placements. Next departure:{" "}
                                     <span className="font-bold text-on-accent">Active Yard Queues</span>.
                                 </p>
                             </div>

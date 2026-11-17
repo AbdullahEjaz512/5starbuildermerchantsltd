@@ -100,9 +100,9 @@ export function Footer() {
                 </div>
 
                 {/* Bottom bar */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs uppercase tracking-widest text-on-accent/40">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs uppercase tracking-widest text-on-accent/40 text-center md:text-left">
                     <p>© {year} {company.name}. All rights reserved.</p>
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center justify-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-accent-bright status-pip"></span>
                         Trade counter open Mon – Sat 07:00 – 17:30
                     </p>
