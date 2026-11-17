@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Colour tokens (from Stitch "Architectural Craft" design system) ---- */
+  --color-canvas: #fbf9f6;
+  --color-surface: #fbf9f6;
+  --color-surface-dim: #dbdad7;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f5f3f0;
+  --color-surface-container: #efeeeb;
+  --color-surface-high: #eae8e5;
+  --color-surface-highest: #e4e2df;
+
+  --color-ink: #1b1c1a;
+  --color-ink-variant: #444748;
+  --color-ink-muted: #747878;
+
+  --color-carbon: #010101;
+  --color-carbon-soft: #1c1c1c;
+  --color-carbon-line: #30312f;
+
+  --color-accent: #a63b00;
+  --color-accent-bright: #fc763b;
+  --color-accent-soft: #ffdbce;
+  --color-accent-deep: #7f2b00;
+
+  --color-stone: #8e8880;
+  --color-stone-line: #e2ddd5;
+
+  --color-on-accent: #ffffff;
+
+  /* ---- Typography ---- */
+  --font-display: var(--font-space-grotesk), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-hanken-grotesk), "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Spacing rhythm ---- */
+  --spacing-gutter: 1.5rem;
+  --spacing-margin: 3rem;
+
+  /* ---- Radius: sharp architectural standard ---- */
+  --radius-none: 0px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Accessible focus states — sharp, high-contrast, no soft glow */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-bright);
+    color: var(--color-carbon);
+  }
+}
+
+@layer utilities {
+  /* Uppercase tracked label used across the design system */
+  .label-tracked {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  /* Hard architectural offset shadow */
+  .shadow-hard {
+    box-shadow: 4px 4px 0px 0px var(--color-carbon);
+  }
+
+  .shadow-hard-accent {
+    box-shadow: 4px 4px 0px 0px var(--color-accent);
+  }
+
+  /* Subtle blueprint grid background */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(to right, rgba(27, 28, 26, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(27, 28, 26, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Animated pulse dot for live status */
+  .status-pip {
+    position: relative;
+  }
+  .status-pip::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: currentColor;
+    animation: pip-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pip-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.6);
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .status-pip::after {
+      animation: none;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
