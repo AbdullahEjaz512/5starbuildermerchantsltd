@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { services, company } from "@/lib/site";
 import { ServiceCard } from "./ServiceCard";
 
@@ -30,6 +31,12 @@ export function ServicesGrid() {
 
                 {/* Supporting message */}
                 <div className="mt-12 bg-carbon text-on-accent p-8 lg:p-12 relative overflow-hidden">
+                    <Image
+                        src="/images/cta-texture.jpg"
+                        alt="Structural building materials"
+                        fill
+                        className="object-cover opacity-15 mix-blend-luminosity pointer-events-none"
+                    />
                     <div className="relative z-10 max-w-4xl space-y-4">
                         <div className="inline-block px-3 py-1 bg-accent-bright text-on-accent label-tracked text-[10px] uppercase tracking-widest font-bold">
                             Direct Trade Motto

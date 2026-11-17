@@ -1,8 +1,30 @@
+import Image from "next/image";
 import { company } from "@/lib/site";
 
 export function ContactDetails() {
     return (
-        <div className="bg-carbon text-on-accent p-6 lg:p-8 space-y-6 shadow-hard">
+        <div className="bg-carbon text-on-accent p-6 lg:p-8 space-y-6 shadow-hard overflow-hidden">
+            {/* Photographic depot card */}
+            <div className="relative w-full h-48 -mx-6 -mt-6 lg:-mx-8 lg:-mt-8 mb-4 overflow-hidden group">
+                <Image
+                    src="/images/contact-yard.jpg"
+                    alt="5 Star Builders Merchants trade counter and warehouse facility in Birmingham"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/30 to-transparent"></div>
+                <div className="absolute bottom-3 left-4">
+                    <span className="label-tracked text-[10px] uppercase font-bold text-accent-bright flex items-center gap-1.5">
+                        <span className="inline-block w-2 h-2 rounded-full bg-accent-bright status-pip"></span>
+                        Aston Trade Counter & Yard
+                    </span>
+                    <span className="text-xs font-semibold block text-white/95 mt-0.5">
+                        30 Tame Road • Open Mon–Sat 07:00
+                    </span>
+                </div>
+            </div>
+
             <div className="space-y-2">
                 <span className="label-tracked text-xs text-accent-bright uppercase tracking-widest font-bold">
                     Depot & Dispatch

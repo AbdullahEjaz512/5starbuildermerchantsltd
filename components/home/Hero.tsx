@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company } from "@/lib/site";
 
 export function Hero() {
@@ -94,20 +95,18 @@ export function Hero() {
 
                     {/* Right: photographic yard depth monolith */}
                     <div className="lg:col-span-5 relative">
-                        <div className="relative bg-surface-container shadow-md overflow-hidden group">
-                            <div className="w-full h-[420px] lg:h-[520px] bg-blueprint flex items-center justify-center relative">
-                                {/* Placeholder visual — replace with next/image yard photo */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-surface-high via-surface-container to-surface-low"></div>
-                                <div className="relative z-10 text-center px-6">
-                                    <span className="material-symbols-outlined text-6xl text-accent/40">
-                                        warehouse
-                                    </span>
-                                    <p className="mt-3 label-tracked text-xs uppercase tracking-widest text-ink-muted">
-                                        Tame Road Yard · B6 7DS
-                                    </p>
-                                </div>
+                        <div className="relative bg-surface-container shadow-xl overflow-hidden group">
+                            <div className="w-full h-[440px] lg:h-[540px] relative overflow-hidden">
+                                <Image
+                                    src="/images/hero-yard.jpg"
+                                    alt="5 Star Builders Merchants main trade yard and materials depot, Aston Birmingham"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 1024px) 100vw, 42vw"
+                                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/30 to-carbon/10"></div>
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/20 to-transparent"></div>
 
                             {/* Structural yard stamp badge */}
                             <div className="absolute top-4 right-4 bg-carbon text-on-accent px-3 py-2 shadow-lg">

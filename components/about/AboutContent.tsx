@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { company } from "@/lib/site";
 
 export function AboutContent() {
@@ -127,23 +128,21 @@ export function AboutContent() {
 
                     {/* Right column: Visual showcase */}
                     <div className="lg:col-span-7 flex flex-col space-y-4">
-                        <div className="relative w-full aspect-[4/3] bg-surface-high overflow-hidden shadow-xl">
-                            <div className="w-full h-full bg-blueprint flex items-center justify-center">
-                                <div className="text-center px-6">
-                                    <span className="material-symbols-outlined text-6xl text-accent/40">
-                                        handyman
-                                    </span>
-                                    <p className="mt-3 label-tracked text-xs uppercase tracking-widest text-ink-muted">
-                                        Tame Road Depot Dispatch
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="absolute bottom-4 right-4 bg-carbon/95 backdrop-blur-md px-4 py-2.5 text-on-accent">
-                                <span className="label-tracked text-xs uppercase tracking-widest text-on-accent/50 block">
+                        <div className="relative w-full aspect-[4/3] bg-surface-high overflow-hidden shadow-2xl group">
+                            <Image
+                                src="/images/about-yard.jpg"
+                                alt="5 Star Builders Merchants trade team and site depot operations in Birmingham"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 55vw"
+                                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/20 to-transparent"></div>
+                            <div className="absolute bottom-4 right-4 bg-carbon/95 backdrop-blur-md px-4 py-2.5 text-on-accent border border-white/10 shadow-lg">
+                                <span className="label-tracked text-xs uppercase tracking-widest text-accent-bright block font-bold">
                                     Tame Road Depot Dispatch
                                 </span>
                                 <span className="label-tracked text-xs uppercase font-bold text-on-accent">
-                                    Verified Dry-Stored Materials
+                                    Verified Dry-Stored Materials • B6 7DS
                                 </span>
                             </div>
                         </div>
@@ -190,13 +189,25 @@ export function AboutContent() {
                     {/* 3 pillar bento grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Pillar 1 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200">
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <span className="w-12 h-12 bg-surface-container flex items-center justify-center text-carbon">
-                                        <span className="material-symbols-outlined text-2xl">warehouse</span>
-                                    </span>
-                                    <span className="label-tracked text-xs text-accent font-bold">01 // Yard Ready</span>
+                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                            <div>
+                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                    <Image
+                                        src="/images/hero-yard.jpg"
+                                        alt="Immediate Yard Fulfillment at 5 Star Builders Merchants"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-carbon/80 via-transparent to-transparent"></div>
+                                    <div className="absolute top-3 right-3">
+                                        <span className="label-tracked text-[10px] uppercase px-2.5 py-1 bg-carbon/90 text-accent-bright font-bold backdrop-blur-sm border border-white/10">
+                                            01 // Yard Ready
+                                        </span>
+                                    </div>
+                                    <div className="absolute bottom-3 left-4 w-9 h-9 bg-accent-bright text-on-accent flex items-center justify-center shadow-md">
+                                        <span className="material-symbols-outlined text-xl">warehouse</span>
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
                                     <h3 className="font-display font-bold text-lg uppercase text-carbon font-bold">
@@ -209,20 +220,32 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low p-3 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>Direct Counter Loading:</span>
                                 <span className="font-bold text-accent">No Queues</span>
                             </div>
                         </div>
 
                         {/* Pillar 2 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200">
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <span className="w-12 h-12 bg-surface-container flex items-center justify-center text-carbon">
-                                        <span className="material-symbols-outlined text-2xl">local_shipping</span>
-                                    </span>
-                                    <span className="label-tracked text-xs text-accent font-bold">02 // Heavy Haulage</span>
+                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                            <div>
+                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                    <Image
+                                        src="/images/delivery-truck.jpg"
+                                        alt="Heavy-Duty Dedicated Fleet at 5 Star Builders Merchants"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-carbon/80 via-transparent to-transparent"></div>
+                                    <div className="absolute top-3 right-3">
+                                        <span className="label-tracked text-[10px] uppercase px-2.5 py-1 bg-carbon/90 text-accent-bright font-bold backdrop-blur-sm border border-white/10">
+                                            02 // Heavy Haulage
+                                        </span>
+                                    </div>
+                                    <div className="absolute bottom-3 left-4 w-9 h-9 bg-accent-bright text-on-accent flex items-center justify-center shadow-md">
+                                        <span className="material-symbols-outlined text-xl">local_shipping</span>
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
                                     <h3 className="font-display font-bold text-lg uppercase text-carbon font-bold">
@@ -236,20 +259,32 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low p-3 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>HIAB Crane Offload:</span>
                                 <span className="font-bold text-accent">Same-Day Active</span>
                             </div>
                         </div>
 
                         {/* Pillar 3 */}
-                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200">
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <span className="w-12 h-12 bg-surface-container flex items-center justify-center text-carbon">
-                                        <span className="material-symbols-outlined text-2xl">construction</span>
-                                    </span>
-                                    <span className="label-tracked text-xs text-accent font-bold">03 // Sourcing Matrix</span>
+                        <div className="bg-surface-lowest p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition-transform duration-200 overflow-hidden group">
+                            <div>
+                                <div className="relative w-full h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-surface-container">
+                                    <Image
+                                        src="/images/contact-yard.jpg"
+                                        alt="Comprehensive Trade Depth at 5 Star Builders Merchants"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-carbon/80 via-transparent to-transparent"></div>
+                                    <div className="absolute top-3 right-3">
+                                        <span className="label-tracked text-[10px] uppercase px-2.5 py-1 bg-carbon/90 text-accent-bright font-bold backdrop-blur-sm border border-white/10">
+                                            03 // Sourcing Matrix
+                                        </span>
+                                    </div>
+                                    <div className="absolute bottom-3 left-4 w-9 h-9 bg-accent-bright text-on-accent flex items-center justify-center shadow-md">
+                                        <span className="material-symbols-outlined text-xl">construction</span>
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
                                     <h3 className="font-display font-bold text-lg uppercase text-carbon font-bold">
@@ -263,7 +298,7 @@ export function AboutContent() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="pt-6 mt-6 bg-surface-low p-3 flex items-center justify-between text-ink label-tracked text-xs uppercase">
+                            <div className="pt-6 mt-6 bg-surface-low -mx-8 -mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>Direct Mill Networks:</span>
                                 <span className="font-bold text-accent">Guaranteed Spec</span>
                             </div>

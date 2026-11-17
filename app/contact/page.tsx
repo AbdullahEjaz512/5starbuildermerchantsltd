@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactDetails } from "@/components/contact/ContactDetails";
 import { MapEmbed } from "@/components/contact/MapEmbed";
@@ -102,6 +103,12 @@ export default function ContactPage() {
             <section className="w-full bg-carbon text-on-accent py-16">
                 <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
                     <div className="bg-surface-highest/10 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                        <Image
+                            src="/images/cta-texture.jpg"
+                            alt="5 Star Builders Merchants trade materials and depot"
+                            fill
+                            className="object-cover opacity-15 mix-blend-luminosity pointer-events-none"
+                        />
                         <div className="relative z-10 max-w-4xl space-y-6">
                             <div className="inline-block px-3 py-1 bg-accent-bright text-on-accent label-tracked text-[10px] uppercase tracking-widest font-bold">
                                 Direct Dispatch

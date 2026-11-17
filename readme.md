@@ -70,7 +70,7 @@ The visual language follows the Stitch "Architectural Craft" / "Foundry & Aggreg
 ## Notes
 
 - **Contact form:** client-side validation only. On submit it opens the visitor's email client with a pre-filled message (mailto fallback). To wire a real backend, add a route handler at `app/api/contact/route.ts` and swap the `handleSubmit` logic in `components/contact/ContactForm.tsx`.
-- **Images:** the hero and about sections currently use styled placeholder blocks. Drop real yard photos into `public/images/` and swap the placeholders for `next/image` components.
+- **Images:** High-resolution trade imagery is stored in `public/images/` and `public/images/services/`, optimized and rendered using `next/image` with responsive `sizes` across Hero, Services, About, Delivery, and Contact pages.
 - **Phone numbers** are centralised in `lib/site.ts` — update once and every page, button, and footer link stays in sync.
 
 ## SEO

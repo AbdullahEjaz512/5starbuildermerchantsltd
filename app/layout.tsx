@@ -3,6 +3,7 @@ import { Space_Grotesk, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { meta } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
@@ -18,6 +19,7 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://5starbuildersmerchants.co.uk"),
   title: {
     default: `${meta.siteName} | Birmingham Builders Merchant & Building Materials Supplier`,
     template: `%s | ${meta.siteName}`,
@@ -43,11 +45,20 @@ export const metadata: Metadata = {
     siteName: meta.siteName,
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-yard.jpg",
+        width: 1600,
+        height: 1067,
+        alt: `${meta.siteName} Birmingham Yard & Delivery Depot`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${meta.siteName} | Birmingham Builders Merchant`,
     description: meta.defaultDescription,
+    images: ["/images/hero-yard.jpg"],
   },
   robots: {
     index: true,
@@ -75,6 +86,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

@@ -25,6 +25,7 @@ export const services = [
         name: "Plumbing & Copper",
         icon: "water_damage",
         badge: "BS EN 1057",
+        image: "/images/services/plumbing.jpg",
         description:
             "Full range of end feed, compression, and modern press fittings. 15mm, 22mm, 28mm copper coils and rigid straight lengths.",
         stock: "Yard Ready • Instant Cut",
@@ -34,6 +35,7 @@ export const services = [
         name: "Structural Timber",
         icon: "carpenter",
         badge: "C24 SCANDINAVIAN",
+        image: "/images/services/wood.jpg",
         description:
             "C16 and C24 kilned & treated carcassing, roof joists, CLS studwork, roofing battens, marine and OSB3 structural sheeting.",
         stock: "Custom Pack Cuts",
@@ -43,6 +45,7 @@ export const services = [
         name: "Electrical Infrastructure",
         icon: "bolt",
         badge: "18TH EDITION",
+        image: "/images/services/electric.jpg",
         description:
             "Twin & earth twin cabling drums, metal clad consumer units, galvanised containment, conduit, isolators & switchgear.",
         stock: "100m Drums & Bundles",
@@ -52,6 +55,7 @@ export const services = [
         name: "Fascia & Soffit",
         icon: "roofing",
         badge: "HEAVY DUTY UPVC",
+        image: "/images/services/fascia.jpg",
         description:
             "Solid full-replacement fascia boards, capping boards, vented and hollow soffits in white, anthracite grey, and black ash.",
         stock: "5-Metre Lengths",
@@ -61,6 +65,7 @@ export const services = [
         name: "Deepflow Guttering",
         icon: "shower",
         badge: "HIGH CAPACITY",
+        image: "/images/services/guttering.jpg",
         description:
             "High flow rainwater systems, squareline, roundline and industrial commercial deep gutter with matching downpipes & offsets.",
         stock: "Full Fitting Packs",
@@ -70,6 +75,7 @@ export const services = [
         name: "Underground Drainage",
         icon: "hardware",
         badge: "110MM / 160MM",
+        image: "/images/services/drainage.jpg",
         description:
             "Terracotta sewer pipes, inspection chambers, bottle gullies, non-return valves, land drainage coils and soakaway crates.",
         stock: "Heavy Groundwork Grade",
@@ -79,6 +85,7 @@ export const services = [
         name: "Plasterboard & Drylining",
         icon: "layers",
         badge: "FIRE & ACOUSTIC",
+        image: "/images/services/plasterboard.jpg",
         description:
             "Soundshield blue acoustic boards, pink fireline, moisture board, standard square & tapered edge 12.5mm / 15mm sheets.",
         stock: "Bulk Pallets or Loose",
@@ -88,6 +95,7 @@ export const services = [
         name: "Bonding & Plasters",
         icon: "architecture",
         badge: "FRESH ROTATION",
+        image: "/images/services/bonding.jpg",
         description:
             "Thistle Multi-Finish, British Gypsum Scheme Bonding Coat, Hardwall, Dri-Wall adhesive, corner beads, scrim tape & pre-grit.",
         stock: "Dry Warehoused",
