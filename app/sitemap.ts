@@ -42,5 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       images: [`${baseUrl}/images/contact-yard.jpg`],
     },
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      images: [
+        `${baseUrl}/images/gallery/WhatsApp Image 2026-11-18 at 12.06.41 PM.jpeg`,
+        `${baseUrl}/images/gallery/WhatsApp Image 2026-11-18 at 12.06.42 PM.jpeg`,
+        `${baseUrl}/images/gallery/WhatsApp Image 2026-11-18 at 12.06.43 PM.jpeg`,
+      ],
+    },
   ];
 }

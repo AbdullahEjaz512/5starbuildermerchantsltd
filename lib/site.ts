@@ -16,6 +16,7 @@ export const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
+    { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
 ];
 
@@ -113,20 +114,20 @@ export const deliveryAreas = [
 
 export const trustPoints = [
     {
-        label: "On-Time Site Drop",
-        value: "98%",
+        label: "Trade Counter Hours",
+        value: "07:00–17:30",
     },
     {
-        label: "Trade Lines in Stock",
-        value: "10K+",
+        label: "Open Days",
+        value: "Mon–Sat",
     },
     {
-        label: "Same Day Birmingham Run",
-        value: "SAME",
+        label: "Depot Postcode",
+        value: "B6 7DS",
     },
     {
-        label: "Minimum Order Pickup",
-        value: "£0",
+        label: "Delivery Area",
+        value: "West Midlands",
     },
 ];
 

@@ -24,7 +24,7 @@ export function AboutContent() {
                                 Est. West Midlands
                             </span>
                             <span className="px-3 py-1 bg-surface-highest text-ink label-tracked text-xs uppercase tracking-wider">
-                                BS EN 1996 Certified
+                                BS EN Standards
                             </span>
                         </div>
                     </div>
@@ -103,24 +103,26 @@ export function AboutContent() {
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 pt-2">
                             <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
                                 <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">
-                                    15<span className="text-accent text-sm sm:text-base">m</span>
+                                    Mon–Sat
                                 </span>
                                 <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
-                                    Avg Yard Load Time
+                                    Trade Counter Open
                                 </span>
                             </div>
                             <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
                                 <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">
-                                    100<span className="text-accent text-sm sm:text-base">%</span>
+                                    B6 7DS
                                 </span>
                                 <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
-                                    BS EN Compliant
+                                    Depot Postcode
                                 </span>
                             </div>
                             <div className="bg-surface-high p-3 sm:p-4 flex flex-col">
-                                <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">B1-B99</span>
+                                <span className="font-display font-bold text-lg sm:text-xl text-carbon font-bold">
+                                    West Midlands
+                                </span>
                                 <span className="label-tracked text-[10px] sm:text-xs uppercase text-ink-variant mt-1">
-                                    Direct Delivery
+                                    Delivery Region
                                 </span>
                             </div>
                         </div>
@@ -216,13 +218,13 @@ export function AboutContent() {
                                     <p className="text-sm text-ink-variant leading-relaxed">
                                         Drive-in loading lanes engineered specifically for flatbeds, vans, and pickups at
                                         our Tame Road site. Forklift loading operators on stand-by from 07:00 daily
-                                        ensure your van is strapped and back en route to site in under 15 minutes.
+                                        ensure your van is ready for collection.
                                     </p>
                                 </div>
                             </div>
                             <div className="pt-6 mt-6 bg-surface-low -mx-6 -mb-6 lg:-mx-8 lg:-mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
                                 <span>Direct Counter Loading:</span>
-                                <span className="font-bold text-accent">No Queues</span>
+                                <span className="font-bold text-accent">Trade Counter</span>
                             </div>
                         </div>
 
@@ -252,16 +254,14 @@ export function AboutContent() {
                                         Heavy-Duty Dedicated Fleet
                                     </h3>
                                     <p className="text-sm text-ink-variant leading-relaxed">
-                                        Our owned multi-ton commercial fleet covers Birmingham, Solihull, Sutton
-                                        Coldfield, and the wider Black Country. Equipped with precision Hiab crane
-                                        offload systems to place bulk aggregates and pallets exactly where your
-                                        groundwork crew needs them.
+                                        Our delivery service covers Birmingham, Solihull, and the wider West Midlands
+                                        region. Direct merchant dispatch with standard site-safe delivery methods.
                                     </p>
                                 </div>
                             </div>
                             <div className="pt-6 mt-6 bg-surface-low -mx-6 -mb-6 lg:-mx-8 lg:-mb-8 p-4 flex items-center justify-between text-ink label-tracked text-xs uppercase">
-                                <span>HIAB Crane Offload:</span>
-                                <span className="font-bold text-accent">Same-Day Active</span>
+                                <span>Delivery Coverage:</span>
+                                <span className="font-bold text-accent">West Midlands</span>
                             </div>
                         </div>
 
@@ -322,22 +322,21 @@ export function AboutContent() {
                                     </h3>
                                 </div>
                                 <p className="text-sm text-on-accent/70 leading-relaxed">
-                                    We operate strictly under British Standard safety and handling codes. All softwood
-                                    timber holds FSC Chain of Custody accreditation, graded C16/C24 for load-bearing
-                                    roof trusses, floor joists, and stud wall frameworks.
+                                    We operate under standard British safety and handling codes. Timber is graded
+                                    C16/C24 for load-bearing roof trusses, floor joists, and stud wall frameworks.
                                 </p>
                                 <div className="pt-4 flex flex-col space-y-3 label-tracked text-xs uppercase tracking-wider text-on-accent/70">
                                     <div className="flex items-center gap-3">
                                         <span className="material-symbols-outlined text-accent-bright">shield</span>
-                                        <span>Fully Insured Commercial HIAB Site Delivery</span>
+                                        <span>Insured Site Delivery</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <span className="material-symbols-outlined text-accent-bright">eco</span>
-                                        <span>100% Certified Sustainable FSC Scandinavian Timber</span>
+                                        <span>Structural Timber C16 / C24</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <span className="material-symbols-outlined text-accent-bright">account_balance</span>
-                                        <span>30-Day B2B Trade Accounts for Verified Contractors</span>
+                                        <span>Direct Merchant Terms Available</span>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +353,7 @@ export function AboutContent() {
                                         Junction 6 for swift regional reach.
                                     </p>
                                     <div className="pt-2 text-accent-bright label-tracked text-xs uppercase font-bold">
-                                        Drive-in Turning Radius: 18m Artic Friendly
+                                        Drive-in Access: Artic Friendly
                                     </div>
                                 </div>
                                 <div className="bg-carbon-soft p-6 space-y-3">
@@ -377,14 +376,14 @@ export function AboutContent() {
                                         Fleet Dispatch Capability
                                     </span>
                                     <p className="font-display font-bold text-lg uppercase text-on-accent font-bold">
-                                        Hiab Cranes & Transit Drop
+                                        Standard Site Delivery
                                     </p>
                                     <p className="text-xs text-on-accent/70">
-                                        Equipped for curbside, driveway, and direct-to-scaffold lifting across
+                                        Equipped for curbside, driveway, and direct-to-scaffold delivery across
                                         high-density residential streets.
                                     </p>
                                     <div className="pt-2 text-accent-bright label-tracked text-xs uppercase font-bold">
-                                        Payload Rating: Up to 26 Tonnes
+                                        Fleet: Commercial Vehicles
                                     </div>
                                 </div>
                                 <div className="bg-carbon-soft p-6 space-y-3">

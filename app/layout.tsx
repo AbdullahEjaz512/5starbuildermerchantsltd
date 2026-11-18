@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { MobileContactBar } from "@/components/layout/MobileContactBar";
 import { meta } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
@@ -265,6 +266,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <MobileContactBar />
       </body>
     </html>
   );

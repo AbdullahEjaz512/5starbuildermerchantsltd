@@ -17,7 +17,7 @@ export function Hero() {
                     <div className="flex items-center gap-3">
                         <span className="label-tracked text-[10px] sm:text-xs uppercase tracking-wider text-accent bg-surface-container px-3 py-1.5 flex items-center gap-1.5 font-bold">
                             <span className="material-symbols-outlined text-sm">local_shipping</span>
-                            Fleet on road • Same-day dispatch across West Midlands
+                            Delivery across the West Midlands
                         </span>
                     </div>
                 </div>
@@ -79,16 +79,16 @@ export function Hero() {
                                 <div className="font-display font-bold text-base sm:text-lg text-accent uppercase mt-0.5 sm:mt-1">
                                     Same Day
                                 </div>
-                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">B1–B99 Postcodes</div>
+                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">West Midlands Coverage</div>
                             </div>
                             <div className="bg-surface-low p-3 sm:p-3.5">
                                 <div className="label-tracked text-[10px] text-ink-variant uppercase tracking-wider">
-                                    Stock Depth
+                                    Trade Counter
                                 </div>
                                 <div className="font-display font-bold text-base sm:text-lg text-carbon uppercase mt-0.5 sm:mt-1">
-                                    10,000+
+                                    Pickup
                                 </div>
-                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">BS EN Certified Lines</div>
+                                <div className="text-[11px] sm:text-xs text-ink-variant mt-0.5">30 Tame Road, B6 7DS</div>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export function Hero() {
                                     Depot #01
                                 </div>
                                 <div className="label-tracked text-[10px] text-on-accent/50">
-                                    Capacity: 42,000 sq ft
+                                    Tame Road Depot • B6 7DS
                                 </div>
                             </div>
 
@@ -133,8 +133,7 @@ export function Hero() {
                                     </span>
                                 </div>
                                 <p className="text-[11px] sm:text-xs text-on-accent/70 leading-relaxed">
-                                    Equipped with remote-controlled heavy crane drops for roadside and rear-scaffold
-                                    placements. Next departure:{" "}
+                                    Same-day fleet departures from our Tame Road depot. Next departure:{" "}
                                     <span className="font-bold text-on-accent">Active Yard Queues</span>.
                                 </p>
                             </div>
