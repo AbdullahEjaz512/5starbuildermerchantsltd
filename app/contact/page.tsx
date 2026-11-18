@@ -81,7 +81,7 @@ export default function ContactPage() {
             </section>
 
             {/* Map */}
-            <section className="w-full bg-surface-low py-16">
+            <section className="w-full bg-surface-low pt-16 pb-6">
                 <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8">
                         <div>
@@ -103,11 +103,12 @@ export default function ContactPage() {
 
             {/* FAQ */}
             <section id="faq" className="w-full bg-surface-low py-16">
-                <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
+                <div className="mx-auto w-full max-w-[1280px]">
                     <FaqAccordion
                         items={faqs}
                         heading="FREQUENTLY ASKED QUESTIONS"
                         intro="Have a question about our products, deliveries or services? Find answers to some of the most common questions below."
+                        className="pt-4 pb-16 lg:pt-6 lg:pb-16"
                     />
                 </div>
             </section>

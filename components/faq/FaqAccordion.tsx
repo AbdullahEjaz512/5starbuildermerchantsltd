@@ -31,7 +31,7 @@ export function FaqAccordion({ items, heading, intro, className }: FaqAccordionP
     };
 
     return (
-        <section className={`w-full bg-surface-low px-5 sm:px-6 lg:px-12 py-16 lg:py-24 ${className ?? ""}`}>
+        <section className={`w-full ${className ?? ""}`}>
             <div className="mx-auto w-full max-w-[1280px]">
                 {heading || intro ? (
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">

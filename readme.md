@@ -52,6 +52,8 @@ components/
   services/           # ServiceCard, ServicesGrid
   contact/            # ContactForm, ContactDetails, MapEmbed
   ui/                 # Button, SectionHeading, StarRating
+  faq/
+  projects/
 lib/
   site.ts             # Centralised business data (phones, address, services, nav)
   utils.ts            # cn() class merge helper
