@@ -3,6 +3,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { DeliveryBanner } from "@/components/home/DeliveryBanner";
+import { FaqPreview } from "@/components/faq/FaqPreview";
 import { CTASection } from "@/components/home/CTASection";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <GalleryPreview />
       <ServicesPreview />
       <DeliveryBanner />
+      <FaqPreview />
       <CTASection />
     </>
   );

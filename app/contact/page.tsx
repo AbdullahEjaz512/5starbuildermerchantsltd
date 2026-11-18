@@ -3,6 +3,8 @@ import Image from "next/image";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactDetails } from "@/components/contact/ContactDetails";
 import { MapEmbed } from "@/components/contact/MapEmbed";
+import { FaqAccordion } from "@/components/faq/FaqAccordion";
+import { faqs } from "@/lib/faq";
 import { company } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -96,6 +98,17 @@ export default function ContactPage() {
                         </p>
                     </div>
                     <MapEmbed />
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section id="faq" className="w-full bg-surface-low py-16">
+                <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-12">
+                    <FaqAccordion
+                        items={faqs}
+                        heading="FREQUENTLY ASKED QUESTIONS"
+                        intro="Have a question about our products, deliveries or services? Find answers to some of the most common questions below."
+                    />
                 </div>
             </section>
 
