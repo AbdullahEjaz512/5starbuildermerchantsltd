@@ -21,7 +21,10 @@ export const galleryCategories: GalleryCategory[] = [
     { id: "delivery", label: "Delivery & Dispatch" },
 ];
 
+export const CLONES_COUNT = 3; // Number of images to clone from each end for infinite loop
+
 export const galleryImages: GalleryImage[] = [
+
     {
         id: "gallery-01",
         src: "/images/gallery/WhatsApp Image 2026-11-18 at 12.06.41 PM.jpeg",
@@ -79,3 +82,13 @@ export const galleryImages: GalleryImage[] = [
         category: "delivery",
     },
 ];
+
+// Create a looped array for the carousel to enable infinite scrolling
+export const loopedGalleryImages: GalleryImage[] = [
+    ...galleryImages.slice(-CLONES_COUNT).map((img) => ({ ...img, id: `clone-prev-${img.id}` })),
+    ...galleryImages,
+    ...galleryImages.slice(0, CLONES_COUNT).map((img) => ({ ...img, id: `clone-next-${img.id}` })),
+];
+
+// Keep track of the actual number of real images (excluding clones)
+export const realImageCount = galleryImages.length;

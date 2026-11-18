@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { galleryImages } from "@/lib/gallery";
+import { CLONES_COUNT, loopedGalleryImages, realImageCount } from "@/lib/gallery";
 
 type PerspectiveCarouselProps = {
     onOpenLightbox: (index: number) => void;
@@ -15,9 +15,11 @@ type Metrics = {
 };
 
 export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps) {
-    const [activeIndex, setActiveIndex] = useState(0);
+    // Start activeIndex at the first *real* image, past the initial clones
+    const [activeIndex, setActiveIndex] = useState(CLONES_COUNT);
     const [dragOffset, setDragOffset] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
+    const [isSnapping, setIsSnapping] = useState(false);
     const [metrics, setMetrics] = useState<Metrics>({
         cardWidth: 280,
         spacing: 215,
@@ -34,7 +36,7 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
     const wheelAccum = useRef(0);
     const wheelLock = useRef(false);
 
-    const total = galleryImages.length;
+    const total = loopedGalleryImages.length;
 
     // Responsive metrics
     useEffect(() => {
@@ -58,6 +60,24 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
         [total]
     );
 
+    const handleInfiniteLoop = useCallback((index: number) => {
+        // If we moved to a clone at the beginning, snap to the corresponding real image at the end
+        if (index < CLONES_COUNT) {
+            setIsSnapping(true);
+            setActiveIndex(index + realImageCount);
+            setTimeout(() => setIsSnapping(false), 50);
+            return true;
+        }
+        // If we moved to a clone at the end, snap to the corresponding real image at the beginning
+        if (index >= CLONES_COUNT + realImageCount) {
+            setIsSnapping(true);
+            setActiveIndex(index - realImageCount);
+            setTimeout(() => setIsSnapping(false), 50);
+            return true;
+        }
+        return false;
+    }, []);
+
     const goTo = useCallback(
         (i: number) => {
             setActiveIndex(clampIndex(i));
@@ -66,8 +86,24 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
         [clampIndex]
     );
 
-    const goNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
-    const goPrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
+    const goNext = useCallback(() => {
+        const next = activeIndex + 1;
+        setActiveIndex(next);
+        setDragOffset(0);
+    }, [activeIndex]);
+
+    const goPrev = useCallback(() => {
+        const prev = activeIndex - 1;
+        setActiveIndex(prev);
+        setDragOffset(0);
+    }, [activeIndex]);
+
+    // Detect when we land on a clone and snap back to real
+    useEffect(() => {
+        if (!isDragging && dragOffset === 0) {
+            handleInfiniteLoop(activeIndex);
+        }
+    }, [activeIndex, isDragging, dragOffset, handleInfiniteLoop]);
 
     // Pointer drag (mouse + touch unified)
     const onPointerDown = (e: React.PointerEvent) => {
@@ -137,7 +173,8 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
             goPrev();
         } else if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            onOpenLightbox(activeIndex);
+            const realIdx = (activeIndex - CLONES_COUNT + realImageCount) % realImageCount;
+            onOpenLightbox(realIdx);
         }
     };
 
@@ -166,7 +203,7 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                     cursor: isDragging ? "grabbing" : "grab",
                 }}
             >
-                {galleryImages.map((image, i) => {
+                {loopedGalleryImages.map((image, i) => {
                     const offset = i - displayIndex;
                     const abs = Math.abs(offset);
                     const translateX = offset * metrics.spacing;
@@ -184,7 +221,8 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                             onClick={() => {
                                 if (dragState.current.moved) return;
                                 if (isActive) {
-                                    onOpenLightbox(i);
+                                    const realIdx = (i - CLONES_COUNT + realImageCount) % realImageCount;
+                                    onOpenLightbox(realIdx);
                                 } else {
                                     goTo(i);
                                 }
@@ -195,6 +233,9 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                                     : `Focus image: ${image.caption}`
                             }
                             aria-current={isActive ? "true" : undefined}
+                            // Clones are decorative/visual only for accessibility
+                            aria-hidden={i < CLONES_COUNT || i >= CLONES_COUNT + realImageCount ? "true" : undefined}
+                            tabIndex={i < CLONES_COUNT || i >= CLONES_COUNT + realImageCount ? -1 : 0}
                             className="absolute top-1/2 left-1/2 block overflow-hidden rounded-xl bg-surface-container shadow-2xl will-change-transform"
                             style={{
                                 width: `${metrics.cardWidth}px`,
@@ -202,7 +243,7 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                                 zIndex,
                                 opacity,
                                 transform: `translate(-50%, -50%) translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
-                                transition: isDragging
+                                transition: isDragging || isSnapping
                                     ? "none"
                                     : "transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease",
                                 pointerEvents: abs > 3.2 ? "none" : "auto",
@@ -215,7 +256,7 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                                 sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 290px"
                                 className="object-cover"
                                 draggable={false}
-                                priority={i < 3}
+                                priority={i < 3 + CLONES_COUNT}
                             />
                             <span className="absolute inset-0 bg-gradient-to-t from-carbon/70 via-transparent to-transparent" />
                             <span className="absolute bottom-0 left-0 right-0 p-3 text-left">
@@ -236,25 +277,24 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                 <button
                     type="button"
                     onClick={goPrev}
-                    disabled={activeIndex === 0}
-                    className="inline-flex h-11 w-11 items-center justify-center border border-stone-line bg-surface-lowest text-carbon transition-colors hover:bg-carbon hover:text-on-accent disabled:cursor-not-allowed disabled:opacity-30"
+                    className="inline-flex h-11 w-11 items-center justify-center border border-stone-line bg-surface-lowest text-carbon transition-colors hover:bg-carbon hover:text-on-accent"
                     aria-label="Previous image"
                 >
                     <span className="material-symbols-outlined">chevron_left</span>
                 </button>
 
                 <div className="flex items-center gap-2" role="tablist" aria-label="Gallery position">
-                    {galleryImages.map((image, i) => (
+                    {Array.from({ length: realImageCount }).map((_, i) => (
                         <button
-                            key={image.id}
+                            key={i}
                             type="button"
                             role="tab"
-                            aria-selected={i === activeIndex}
-                            aria-label={`Go to image ${i + 1}: ${image.caption}`}
-                            onClick={() => goTo(i)}
-                            className={`h-1.5 transition-all ${i === activeIndex
-                                    ? "w-8 bg-accent"
-                                    : "w-3 bg-stone-line hover:bg-stone"
+                            aria-selected={(activeIndex - CLONES_COUNT + realImageCount) % realImageCount === i}
+                            aria-label={`Go to image ${i + 1}`}
+                            onClick={() => goTo(i + CLONES_COUNT)}
+                            className={`h-1.5 transition-all ${(activeIndex - CLONES_COUNT + realImageCount) % realImageCount === i
+                                ? "w-8 bg-accent"
+                                : "w-3 bg-stone-line hover:bg-stone"
                                 }`}
                         />
                     ))}
@@ -263,8 +303,7 @@ export function PerspectiveCarousel({ onOpenLightbox }: PerspectiveCarouselProps
                 <button
                     type="button"
                     onClick={goNext}
-                    disabled={activeIndex === total - 1}
-                    className="inline-flex h-11 w-11 items-center justify-center border border-stone-line bg-surface-lowest text-carbon transition-colors hover:bg-carbon hover:text-on-accent disabled:cursor-not-allowed disabled:opacity-30"
+                    className="inline-flex h-11 w-11 items-center justify-center border border-stone-line bg-surface-lowest text-carbon transition-colors hover:bg-carbon hover:text-on-accent"
                     aria-label="Next image"
                 >
                     <span className="material-symbols-outlined">chevron_right</span>
