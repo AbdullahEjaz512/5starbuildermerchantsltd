@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { company, navLinks, services } from "@/lib/site";
+import { Logo } from "@/components/logo/Logo";
 
 export function Footer() {
     const [year, setYear] = useState(2026);
@@ -17,12 +18,20 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-carbon-line">
                     {/* Brand column */}
                     <div className="lg:col-span-4 space-y-5">
-                        <div className="flex items-center gap-2.5">
-                            <span className="inline-block w-2 h-2 bg-accent-bright status-pip"></span>
-                            <span className="font-display font-bold text-xl tracking-tight uppercase">
-                                5 Star Builders Merchants
-                            </span>
-                        </div>
+
+                        {/* Brand Logo */}
+                        <Link
+                            href="/"
+                            aria-label="5 Star Builders Merchants home"
+                            className="block w-full max-w-[380px]"
+                        >
+                            <Logo
+                                variant="light"
+                                showTagline={true}
+                                size="default"
+                            />
+                        </Link>
+
                         <p className="text-on-accent/70 max-w-sm leading-relaxed">
                             Birmingham's heavy structural & architectural merchant partner. Supporting regional contractors, developers, and trades with certified supplies, timber, and same-day fleet haulage.
                         </p>

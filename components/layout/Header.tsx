@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { company, navLinks } from "@/lib/site";
 import { MobileNav } from "./MobileNav";
+import { Logo } from "@/components/logo/Logo";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,14 @@ export function Header() {
                         {/* Logo */}
                         <Link
                             href="/"
-                            className="flex items-center gap-2.5 text-carbon font-display font-bold text-base sm:text-xl tracking-tight uppercase"
+                            aria-label="5 Star Builders Merchants home"
+                            className="flex w-[190px] shrink-0 items-center sm:w-[220px]"
                         >
-                            <span className="inline-block w-2 h-2 bg-accent-bright status-pip"></span>
-                            <span className="hidden sm:inline">5 Star Builders Merchants</span>
-                            <span className="sm:hidden">5 Star Merchants</span>
+                            <Logo
+                                showTagline={false}
+                                variant="dark"
+                                size="compact"
+                            />
                         </Link>
 
                         {/* Desktop nav */}
