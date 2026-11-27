@@ -1,5 +1,7 @@
 # 5 Star Builders Merchants Ltd
 
+Website URL=https://www.5starbuildersmerchantsltd.co.uk/
+
 Production-ready marketing website for **5 Star Builders Merchants Ltd**, a local Birmingham builders merchant supplying building materials for repair, renovation, and any building work.
 
 Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**, following the Google Stitch design export for layout, spacing, and visual direction and for email used resend api.
