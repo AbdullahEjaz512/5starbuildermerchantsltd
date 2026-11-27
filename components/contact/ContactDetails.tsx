@@ -80,6 +80,21 @@ export function ContactDetails() {
                 </div>
 
                 <div className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-accent-bright text-xl">mail</span>
+                    <div className="min-w-0">
+                        <div className="label-tracked text-[10px] uppercase tracking-wider text-on-accent/50">
+                            Email
+                        </div>
+                        <a
+                            href={`mailto:${company.email}`}
+                            className="break-all text-sm font-bold hover:text-accent-bright transition-colors"
+                        >
+                            {company.email}
+                        </a>
+                    </div>
+                </div>
+
+                <div className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-accent-bright text-xl">schedule</span>
                     <div>
                         <div className="label-tracked text-[10px] uppercase tracking-wider text-on-accent/50">

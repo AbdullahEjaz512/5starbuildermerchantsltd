@@ -101,6 +101,12 @@ export function Footer() {
                             >
                                 <span className="text-accent-bright">■</span> {company.mobile}
                             </a>
+                            <a
+                                href={`mailto:${company.email}`}
+                                className="block break-all text-on-accent/70 hover:text-accent-bright transition-colors"
+                            >
+                                <span className="text-accent-bright">■</span> {company.email}
+                            </a>
                             <p className="text-on-accent/50 text-xs uppercase tracking-wider">
                                 {company.hours}
                             </p>

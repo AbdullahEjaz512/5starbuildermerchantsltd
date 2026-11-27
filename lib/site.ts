@@ -7,7 +7,7 @@ export const company = {
     phone: "0121 7291749",
     mobile: "07397 573929",
     whatsapp: "447397573929",
-    email: "info@5starbuildersmerchants.co.uk",
+    email: "info@5starbuildersmerchantsltd.co.uk",
     hours: "Mon – Sat: 07:00 – 17:30",
     sunday: "Closed",
     description:

@@ -100,7 +100,7 @@ const jsonLd = {
         "Local Birmingham builders merchant supplying building materials for repair, renovation, and any building work. Trade counter pickup in minutes and same-day delivery across the West Midlands.",
       url: siteUrl,
       telephone: "+441217291749",
-      email: "info@5starbuildersmerchants.co.uk",
+      email: "info@5starbuildersmerchantsltd.co.uk",
       address: {
         "@type": "PostalAddress",
         streetAddress: "30 Tame Road",
