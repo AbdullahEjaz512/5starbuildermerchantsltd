@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { company, services } from "@/lib/site";
+import { company, services, siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
     return services.map((service) => ({ slug: service.id }));
@@ -69,8 +69,8 @@ export default async function ServicePage({
             },
         },
         areaServed: "West Midlands",
-        url: `https://5starbuildersmerchants.co.uk/services/${service.id}`,
-        image: `https://5starbuildersmerchants.co.uk${service.image}`,
+        url: `${siteUrl}/services/${service.id}`,
+        image: `${siteUrl}${service.image}`,
     };
 
     return (

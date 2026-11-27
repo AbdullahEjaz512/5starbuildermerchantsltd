@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
-import { company } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "Services",
     description:
         "5 Star Builders Merchants Ltd supplies plumbing, wood, electric, fascia, guttering, drainage, plasterboard, and scheme bonding across Birmingham. We provide all building stuff — repair, renovation, any building work.",
+    alternates: { canonical: "/services" },
+    openGraph: {
+        title: "Building Materials & Merchant Services | Birmingham",
+        description:
+            "Browse plumbing, timber, electrical, roofline, drainage, plasterboard and plaster supplies from our Birmingham trade counter.",
+        url: "/services",
+        type: "website",
+        images: ["/images/services/plumbing.jpg"],
+    },
 };
 
 export default function ServicesPage() {

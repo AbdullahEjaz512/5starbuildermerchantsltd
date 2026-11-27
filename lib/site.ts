@@ -1,3 +1,5 @@
+export const siteUrl = "https://www.5starbuildersmerchantsltd.co.uk";
+
 export const company = {
     name: "5 Star Builders Merchants Ltd",
     tagline: "We provide all building stuff. We deliver as well.",

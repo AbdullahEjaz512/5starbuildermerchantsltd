@@ -11,6 +11,15 @@ export const metadata: Metadata = {
     title: "Contact",
     description:
         "Contact 5 Star Builders Merchants Ltd at 30 Tame Road, Birmingham B6 7DS. Call 0121 7291749 or WhatsApp 07397 573929 for building materials, delivery, and trade quotes.",
+    alternates: { canonical: "/contact" },
+    openGraph: {
+        title: "Contact 5 Star Builders Merchants in Birmingham",
+        description:
+            "Call, WhatsApp or send a trade enquiry to 5 Star Builders Merchants at 30 Tame Road, Birmingham B6 7DS.",
+        url: "/contact",
+        type: "website",
+        images: ["/images/contact-yard.jpg"],
+    },
 };
 
 export default function ContactPage() {

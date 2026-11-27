@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -22,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/", "/llms.txt", "/llms-full.txt"],
       },
     ],
-    sitemap: "https://5starbuildersmerchants.co.uk/sitemap.xml",
-    host: "https://5starbuildersmerchants.co.uk",
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

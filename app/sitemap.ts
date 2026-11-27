@@ -1,21 +1,18 @@
 import type { MetadataRoute } from "next";
-import { services } from "@/lib/site";
+import { services, siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://5starbuildersmerchants.co.uk";
-  const now = new Date();
+  const baseUrl = siteUrl;
 
   return [
     {
       url: `${baseUrl}`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
       images: [`${baseUrl}/images/hero-yard.jpg`],
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
       images: [
@@ -31,21 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
       images: [`${baseUrl}/images/about-yard.jpg`],
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
       images: [`${baseUrl}/images/contact-yard.jpg`],
     },
     {
       url: `${baseUrl}/gallery`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
       images: [
@@ -54,9 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${baseUrl}/images/gallery/WhatsApp Image 2026-11-18 at 12.06.43 PM.jpeg`,
       ],
     },
+    {
+      url: `${baseUrl}/projects`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...services.map((service) => ({
       url: `${baseUrl}/services/${service.id}`,
-      lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.7,
       images: [`${baseUrl}${service.image}`],

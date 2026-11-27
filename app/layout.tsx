@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { MobileContactBar } from "@/components/layout/MobileContactBar";
-import { meta } from "@/lib/site";
+import { meta, siteUrl } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -20,14 +20,14 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://5starbuildersmerchants.co.uk"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${meta.siteName} | Birmingham Builders Merchant & Building Materials Supplier`,
     template: `%s | ${meta.siteName}`,
   },
   description: meta.defaultDescription,
   applicationName: meta.siteName,
-  authors: [{ name: meta.siteName, url: "https://5starbuildersmerchants.co.uk" }],
+  authors: [{ name: meta.siteName, url: siteUrl }],
   creator: meta.siteName,
   publisher: meta.siteName,
   category: "Building Materials & Construction",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${meta.siteName} | Birmingham Builders Merchant`,
     description: meta.defaultDescription,
-    url: "https://5starbuildersmerchants.co.uk",
+    url: siteUrl,
     siteName: meta.siteName,
     locale: "en_GB",
     type: "website",
@@ -93,12 +93,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["HardwareStore", "HomeAndConstructionBusiness", "LocalBusiness"],
-      "@id": "https://5starbuildersmerchants.co.uk/#organization",
+      "@id": `${siteUrl}/#organization`,
       name: "5 Star Builders Merchants Ltd",
       legalName: "5 Star Builders Merchants Ltd",
       description:
         "Local Birmingham builders merchant supplying building materials for repair, renovation, and any building work. Trade counter pickup in minutes and same-day delivery across the West Midlands.",
-      url: "https://5starbuildersmerchants.co.uk",
+      url: siteUrl,
       telephone: "+441217291749",
       email: "info@5starbuildersmerchants.co.uk",
       address: {
@@ -133,12 +133,12 @@ const jsonLd = {
       currenciesAccepted: "GBP",
       paymentAccepted: "Cash, Credit Card, Debit Card, B2B Trade Account",
       image: [
-        "https://5starbuildersmerchants.co.uk/images/hero-yard.jpg",
-        "https://5starbuildersmerchants.co.uk/images/about-yard.jpg",
-        "https://5starbuildersmerchants.co.uk/images/delivery-truck.jpg",
-        "https://5starbuildersmerchants.co.uk/images/contact-yard.jpg",
+        `${siteUrl}/images/hero-yard.jpg`,
+        `${siteUrl}/images/about-yard.jpg`,
+        `${siteUrl}/images/delivery-truck.jpg`,
+        `${siteUrl}/images/contact-yard.jpg`,
       ],
-      logo: "https://5starbuildersmerchants.co.uk/images/hero-yard.jpg",
+      logo: `${siteUrl}/images/hero-yard.jpg`,
       areaServed: [
         { "@type": "City", name: "Birmingham" },
         { "@type": "AdministrativeArea", name: "West Midlands" },
@@ -229,12 +229,12 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://5starbuildersmerchants.co.uk/#website",
-      url: "https://5starbuildersmerchants.co.uk",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
       name: "5 Star Builders Merchants Ltd",
       description: "Birmingham Builders Merchant & Building Materials Supplier",
       publisher: {
-        "@id": "https://5starbuildersmerchants.co.uk/#organization",
+        "@id": `${siteUrl}/#organization`,
       },
       inLanguage: "en-GB",
     },
