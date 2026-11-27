@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { company } from "@/lib/site";
 
 export type ServiceCardProps = {
@@ -45,12 +46,12 @@ export function ServiceCard({ id, name, icon, badge, image, description, stock }
             </div>
             <div className="mt-6 pt-4 bg-surface-low -mx-6 -mb-6 p-4 flex items-center justify-between label-tracked text-[10px] uppercase">
                 <span className="text-ink-variant font-bold">{stock}</span>
-                <a
-                    href={`tel:${company.phone.replace(/\s/g, "")}`}
+                <Link
+                    href={`/services/${id}`}
                     className="text-accent font-bold hover:underline inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
                 >
-                    Call Now <span>→</span>
-                </a>
+                    Learn More <span>→</span>
+                </Link>
             </div>
         </article>
     );

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { services } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://5starbuildersmerchants.co.uk";
@@ -53,5 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${baseUrl}/images/gallery/WhatsApp Image 2026-11-18 at 12.06.43 PM.jpeg`,
       ],
     },
+    ...services.map((service) => ({
+      url: `${baseUrl}/services/${service.id}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+      images: [`${baseUrl}${service.image}`],
+    })),
   ];
 }

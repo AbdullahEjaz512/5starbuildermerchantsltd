@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { company, navLinks } from "@/lib/site";
+import { company, navLinks, services } from "@/lib/site";
 import { MobileNav } from "./MobileNav";
 import { Logo } from "@/components/logo/Logo";
 
@@ -29,7 +29,35 @@ export function Header() {
 
                         {/* Desktop nav */}
                         <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
-                            {navLinks.map((link) => (
+                            {navLinks.map((link) => link.href === "/services" ? (
+                                <div key={link.href} className="relative group">
+                                    <Link
+                                        href={link.href}
+                                        className="inline-flex items-center gap-1 text-ink-variant group-hover:text-accent transition-colors font-display font-semibold text-xs uppercase tracking-widest py-6"
+                                    >
+                                        {link.label}
+                                        <span className="material-symbols-outlined text-base transition-transform group-hover:rotate-180">expand_more</span>
+                                    </Link>
+                                    <div className="absolute left-1/2 top-full hidden w-[290px] -translate-x-1/2 border border-stone-line bg-canvas shadow-xl group-hover:block group-focus-within:block">
+                                        <Link
+                                            href="/services"
+                                            className="block border-b border-stone-line px-5 py-3 text-[11px] font-bold uppercase tracking-widest text-accent hover:bg-surface-low"
+                                        >
+                                            View all services
+                                        </Link>
+                                        {services.map((service) => (
+                                            <Link
+                                                key={service.id}
+                                                href={`/services/${service.id}`}
+                                                className="flex items-center gap-3 px-5 py-3 border-b border-stone-line/70 last:border-b-0 text-xs font-semibold text-carbon hover:bg-surface-low hover:text-accent transition-colors"
+                                            >
+                                                <span className="material-symbols-outlined text-accent text-base">{service.icon}</span>
+                                                {service.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
                                 <Link
                                     key={link.href}
                                     href={link.href}

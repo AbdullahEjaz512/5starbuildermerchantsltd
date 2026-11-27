@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { company, navLinks } from "@/lib/site";
+import { company, navLinks, services } from "@/lib/site";
 
 type MobileNavProps = {
     isOpen: boolean;
@@ -44,14 +44,30 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             <div className="px-5 py-8">
                 <nav className="space-y-1">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            onClick={onClose}
-                            className="block py-4 border-b border-carbon-line text-2xl font-display font-bold uppercase tracking-tight hover:text-accent-bright transition-colors"
-                        >
-                            {link.label}
-                        </Link>
+                        <div key={link.href} className="border-b border-carbon-line">
+                            <Link
+                                href={link.href}
+                                onClick={onClose}
+                                className="block py-4 text-2xl font-display font-bold uppercase tracking-tight hover:text-accent-bright transition-colors"
+                            >
+                                {link.label}
+                            </Link>
+                            {link.href === "/services" && (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 pb-4">
+                                    {services.map((service) => (
+                                        <Link
+                                            key={service.id}
+                                            href={`/services/${service.id}`}
+                                            onClick={onClose}
+                                            className="flex items-center gap-2 py-2 text-sm text-on-accent/75 hover:text-accent-bright"
+                                        >
+                                            <span className="material-symbols-outlined text-accent-bright text-base">{service.icon}</span>
+                                            {service.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     ))}
                 </nav>
 
