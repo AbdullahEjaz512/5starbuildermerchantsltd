@@ -159,6 +159,15 @@ const jsonLd = {
               name: "Plumbing & Copper Fittings (BS EN 1057)",
               description:
                 "15mm, 22mm, 28mm copper coils and rigid straight lengths with compression, press, and end-feed fittings.",
+              image: `${siteUrl}/images/services/plumbing.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "5.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/plumbing`,
+              },
             },
           },
           {
@@ -168,6 +177,15 @@ const jsonLd = {
               name: "Structural Scandinavian C24 & C16 Timber",
               description:
                 "Kilned & treated carcassing, roof joists, CLS studwork, roofing battens, marine and OSB3 sheeting.",
+              image: `${siteUrl}/images/services/wood.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "8.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/wood`,
+              },
             },
           },
           {
@@ -177,6 +195,15 @@ const jsonLd = {
               name: "Electrical Infrastructure & 18th Edition Cables",
               description:
                 "Twin & earth cable drums, metal clad consumer units, conduit, isolators, and switchgear.",
+              image: `${siteUrl}/images/services/electric.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "12.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/electric`,
+              },
             },
           },
           {
@@ -186,6 +213,15 @@ const jsonLd = {
               name: "Heavy Duty UPVC Fascia & Soffit",
               description:
                 "Full replacement fascia boards, capping boards, vented and hollow soffits in white, anthracite, and black ash.",
+              image: `${siteUrl}/images/services/fascia.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "19.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/fascia`,
+              },
             },
           },
           {
@@ -195,6 +231,15 @@ const jsonLd = {
               name: "Deepflow Rainwater Guttering Systems",
               description:
                 "High capacity commercial and residential rainwater systems with matching downpipes and fittings.",
+              image: `${siteUrl}/images/services/guttering.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "6.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/guttering`,
+              },
             },
           },
           {
@@ -204,6 +249,15 @@ const jsonLd = {
               name: "Underground Drainage & Sewer Pipes",
               description:
                 "110mm and 160mm terracotta sewer pipes, inspection chambers, gullies, and non-return valves.",
+              image: `${siteUrl}/images/services/drainage.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "9.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/drainage`,
+              },
             },
           },
           {
@@ -213,6 +267,15 @@ const jsonLd = {
               name: "Plasterboard, Acoustic Drylining & Fireline",
               description:
                 "Soundshield acoustic blue boards, pink fireline, moisture board, and standard 12.5mm / 15mm sheets.",
+              image: `${siteUrl}/images/services/plasterboard.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "7.99",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/plasterboard`,
+              },
             },
           },
           {
@@ -222,6 +285,15 @@ const jsonLd = {
               name: "British Gypsum Scheme Bonding & Plasters",
               description:
                 "Thistle Multi-Finish, Scheme Bonding Coat, Hardwall, Dri-Wall adhesive, beads, and scrim tape.",
+              image: `${siteUrl}/images/services/bonding.jpg`,
+              brand: { "@type": "Brand", name: "5 Star Builders Merchants Ltd" },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: "8.49",
+                availability: "https://schema.org/InStock",
+                url: `${siteUrl}/services/scheme-bonding`,
+              },
             },
           },
         ],
